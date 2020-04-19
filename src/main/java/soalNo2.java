@@ -21,7 +21,7 @@ public class soalNo2<T> extends Stack<T> {
 
     @Override
     public T push(T object) {
-        //If the stack is too big, remove elements until it's the right size.
+        //If the stack is too big, do nothing.
         if (this.size() >= maxSize) {
             System.out.println("STACK IS FULL");
             return null;
