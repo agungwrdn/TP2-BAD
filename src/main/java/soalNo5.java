@@ -61,8 +61,9 @@ public class soalNo5 {
                 + "(1001, 'Java for dummies', 'Tah Ah Teck', 11.11, 11),"
                 + "(1002, 'More Java for dummies', 'Tah ah Teck', 22.22, 22),"
                 + "(1003, 'More Java for more dummies', 'Mohammad Ali', 33.33, 33),"
-                + "(1004, 'A Teaspoon of Java', 'Kevin Jones', 55.55, 55)"
-                + "ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title;";
+                + "(1004, 'A Cup of Java', 'Kumar', 44.44, 44),"
+                + "(1005, 'A Teaspoon of Java', 'Kevin Jones', 55.55, 55)"
+                + "ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, author = EXCLUDED.author, price = EXCLUDED.price, qty = EXCLUDED.qty;";
         
         boolean add = stmt.execute(query);
         if (!add) {
